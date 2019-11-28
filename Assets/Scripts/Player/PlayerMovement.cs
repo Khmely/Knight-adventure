@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
-	public int playerSpeed = 10;
+	public int playerSpeed = 9;
 	public int jumpForce = 1250;
 	public float downRaySize = 0.8f;
 	public Transform swordTransform;
