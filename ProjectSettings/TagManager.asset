@@ -15,6 +15,7 @@ TagManager:
   - Moving Platform
   - Player Main Collider
   - Portal
+  - NPC
   layers:
   - Default
   - TransparentFX

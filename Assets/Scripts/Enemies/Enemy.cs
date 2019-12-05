@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour {
         m_animator = GetComponent <Animator> ();
         m_enemyRb = GetComponent <Rigidbody2D> ();
         m_collider = GetComponent <CapsuleCollider2D> ();
-        m_animator.SetBool (EnemyAnimation.TransitionCoditions.Walk, true);
+        m_animator.SetBool(EnemyAnimation.TransitionCoditions.Walk, true);
         groundRaySize = m_collider.bounds.size.y * 0.75f;
     }
 

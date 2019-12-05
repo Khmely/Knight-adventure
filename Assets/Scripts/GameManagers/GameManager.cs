@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 
 	public Text scoreHolder;
 	public Text HealthCount;
+    public Text monolog;
 	public Image HealthUI;
     //public GameObject OptionsMenu;
 
@@ -15,17 +16,23 @@ public class GameManager : MonoBehaviour {
 	private int livesRemain;
     private int enemies;
 
-
     public static int score;
 
     private void Start()
     {
         PlayerPrefs.SetString("SceneName", SceneManager.GetActiveScene().name);
+        ShowMonolog();
+        Invoke("DisableText", 2f);
     }
     private void Awake()
     {
         livesRemain = MAX_HEALTHCOUNT;
         SetHealthUI();
+    }
+
+    public void ShowMonolog() 
+    {
+        monolog.text = "I need to find Ms Anna!";
     }
 
     public void Update()
@@ -45,7 +52,12 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	void PlayerDied () {
+    void DisableText()
+    {
+        monolog.enabled = false;
+    }
+
+    void PlayerDied () {
 		livesRemain -= 1;
 		SetHealthUI();
         if (livesRemain <= 0) {
