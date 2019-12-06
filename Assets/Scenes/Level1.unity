@@ -3323,11 +3323,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 212921602775766580, guid: c42861ad8be987e4295614062bfa1fe0,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 114580221987938970, guid: c42861ad8be987e4295614062bfa1fe0,
         type: 3}
       propertyPath: maincollider
@@ -3338,6 +3333,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1865532933}
+    - target: {fileID: 212921602775766580, guid: c42861ad8be987e4295614062bfa1fe0,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c42861ad8be987e4295614062bfa1fe0, type: 3}
 --- !u!1 &373500863
@@ -6136,6 +6136,7 @@ GameObject:
   - component: {fileID: 752823526}
   - component: {fileID: 752823525}
   - component: {fileID: 752823524}
+  - component: {fileID: 752823529}
   m_Layer: 0
   m_Name: NPCWoman
   m_TagString: Untagged
@@ -6198,7 +6199,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 957865b206bb3f848a949ff6705e096d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6261,6 +6262,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &752823529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752823523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464b356bf456dc3428d5ce54795d9d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &763231322
 GameObject:
   m_ObjectHideFlags: 0

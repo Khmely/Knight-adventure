@@ -21,8 +21,10 @@ public class GameManager : MonoBehaviour {
     private void Start()
     {
         PlayerPrefs.SetString("SceneName", SceneManager.GetActiveScene().name);
-        ShowMonolog();
-        Invoke("DisableText", 2f);
+        if (SceneManager.GetActiveScene().name == "Level1") {
+            ShowMonolog();
+            Invoke("DisableText", 2f);
+        }
     }
     private void Awake()
     {
