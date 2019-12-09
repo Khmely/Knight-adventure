@@ -8,12 +8,9 @@ public class nextLevel : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Portal");
         if (collision.gameObject.tag == "Player Main Collider")
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            SceneManager.LoadScene("LevelUp", LoadSceneMode.Additive);
-
+            SceneManager.LoadScene("LevelUp");
         }
     }
 }

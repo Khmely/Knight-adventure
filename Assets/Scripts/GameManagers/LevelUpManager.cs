@@ -14,6 +14,10 @@ public class LevelUpManager : MonoBehaviour
         if (PlayerPrefs.GetString("SceneName") == "Level1") {
             SceneManager.LoadScene("Level2");
         }
+        else if (PlayerPrefs.GetString("SceneName") == "Level2")
+        {
+            SceneManager.LoadScene("Level3");
+        }
 
     }
 
@@ -24,6 +28,10 @@ public class LevelUpManager : MonoBehaviour
         if (PlayerPrefs.GetString("SceneName") == "Level1")
         {
             SceneManager.LoadScene("Level2");
+        } 
+        else if (PlayerPrefs.GetString("SceneName") == "Level2") 
+        {
+            SceneManager.LoadScene("Level3");
         }
     }
 }
