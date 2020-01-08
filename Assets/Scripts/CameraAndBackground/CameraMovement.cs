@@ -47,9 +47,10 @@ public class CameraMovement : MonoBehaviour {
 
 	void FixedUpdate () {
 		float x = Mathf.Clamp (m_playerTrans.position.x, minClampCalcPos.x, maxClampCalcPos.x);
-		float y = this.transform.position.y;
+        float y = Mathf.Clamp(m_playerTrans.position.y, minClampCalcPos.y, maxClampCalcPos.y);
 
-		PlayerTouchesBounds ();
+
+        PlayerTouchesBounds ();
 
 		// above threshold
 		if (boundsTouched) {
@@ -70,7 +71,7 @@ public class CameraMovement : MonoBehaviour {
 	void PlayerTouchesBounds () {
 		if (m_playerTrans.position.y >= transform.position.y + cameraThresholds.max.y) {
 			if (!boundsTouched) {
-				currentSmoothDamp = m_smoothTime * 4f;
+				currentSmoothDamp = m_smoothTime * 1f;
 			}
 			boundsTouched = true;
 		}

@@ -212,6 +212,20 @@ public class PlayerMovement : MonoBehaviour {
         m_playerRb.gravityScale = 4;
         m_playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
-   
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Equals("Platform")) {
+            this.transform.parent = collision.transform;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Equals("Platform"))
+        {
+            this.transform.parent = null;
+        }
+    }
 }
 
