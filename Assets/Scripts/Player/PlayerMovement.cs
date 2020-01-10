@@ -95,7 +95,6 @@ public class PlayerMovement : MonoBehaviour {
 		    }
 
 			Vector2 tempScale;
-		    // flip sprite based on direction facing
 		    if (m_moveX < 0.0f) {
 				tempScale = new Vector2 (-1, 1);
 			    m_playerSpriteRenderer.flipX = true;
@@ -115,14 +114,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Jump () {
 		m_input.m_jumpPressed = false;
-		JoyInputController.m_jump = false;
-
 		if (m_input.isOnGround) {
 			transform.parent = null;
 			m_playerRb.velocity = Vector2.zero;
 			m_playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 		}
-
 		SetGroundStatus (false);
 	}
 
@@ -154,11 +150,11 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void PlayerRaycast() {
-		RaycastHit2D downRayLeft = Physics2D.Raycast (this.transform.position + new Vector3(-0.35f, 0), Vector2.down, downRaySize);
-		RaycastHit2D downRayRight = Physics2D.Raycast (this.transform.position + new Vector3(0.35f, 0), Vector2.down, downRaySize);
+		RaycastHit2D downRayLeft = Physics2D.Raycast (this.transform.position + new Vector3(-0.2f, 0), Vector2.down, downRaySize);
+		RaycastHit2D downRayRight = Physics2D.Raycast (this.transform.position + new Vector3(0.2f, 0), Vector2.down, downRaySize);
 		RaycastHit2D downRay = Physics2D.Raycast (this.transform.position, Vector2.down, downRaySize);
 
-		if (downRayRight.collider != null || downRayLeft.collider != null || downRay.collider != null) {
+        if (downRayRight.collider != null || downRayLeft.collider != null || downRay.collider != null) {
 			bool leftCollider = downRayLeft.collider != null && downRayLeft.collider.tag == "Ground&Obstacles";
 			bool rightCollider = downRayRight.collider !=null && downRayRight.collider.tag == "Ground&Obstacles";
 			bool centerCollider = downRay.collider !=null && downRay.collider.tag == "Ground&Obstacles";
@@ -215,7 +211,8 @@ public class PlayerMovement : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("Platform")) {
+        if (collision.gameObject.name.Equals("Platform"))
+        {
             this.transform.parent = collision.transform;
         }
     }

@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public enum EnemyType {
-    BANDITS
+    BANDITS,
+    DEMON
 };
 
 public class Enemy : MonoBehaviour {
@@ -55,7 +56,6 @@ public class Enemy : MonoBehaviour {
         m_direction = new Vector2(localScale.x , transform.right.y);
     }
 
-    // Two raycasts pointing downwards on either sides of the NPC to make checks on floor ends
     public void CheckGroundEnds () {
         LayerMask targetLayer = 1 << LayerMask.NameToLayer("Platform");
         Vector2 bounds = m_collider.bounds.size;
@@ -65,8 +65,6 @@ public class Enemy : MonoBehaviour {
         RaycastHit2D groundCheckRayRight = Physics2D.Raycast (origin1, Vector2.down, groundRaySize, targetLayer);
         RaycastHit2D groundCheckRayLeft = Physics2D.Raycast (origin2, Vector2.down, groundRaySize, targetLayer);
 
-        // If any of the raycasts is not on ground
-        // Ground check bool is used to avoid the below 'if' statement to execute repeatedly until both of rays are back ground.
         if ((groundCheckRayRight.collider == null || groundCheckRayLeft.collider == null)) {
             CheckAndFlip (groundCheckRayLeft, groundCheckRayRight);
         }
@@ -77,14 +75,12 @@ public class Enemy : MonoBehaviour {
         {
             if (LeftRay.collider == null)
             {
-                // check if the player position is set to right side i.e scale = 1
                 Vector2 localScale = m_enemyRb.transform.localScale;
                 if (localScale.x != 1)
                 {
                     localScale.x = 1;
                     transform.localScale = localScale;
                 }
-
                 if (m_direction.x != 1)
                 {
                     m_direction = new Vector2(localScale.x, transform.right.y);
@@ -93,7 +89,6 @@ public class Enemy : MonoBehaviour {
 
             if (RightRay.collider == null)
             {
-                // check if player position is set to left sidee i.e scale = -1
                 Vector2 localScale = m_enemyRb.transform.localScale;
                 if (localScale.x != -1)
                 {
@@ -109,7 +104,6 @@ public class Enemy : MonoBehaviour {
         else {
             if (LeftRay.collider == null)
             {
-                // check if the player position is set to right side i.e scale = 1
                 Vector2 localScale = m_enemyRb.transform.localScale;
                 if (localScale.x != 1)
                 {
@@ -125,7 +119,6 @@ public class Enemy : MonoBehaviour {
 
             if (RightRay.collider == null)
             {
-                // check if player position is set to left sidee i.e scale = -1
                 Vector2 localScale = m_enemyRb.transform.localScale;
                 if (localScale.x != -1)
                 {
@@ -174,26 +167,19 @@ public class Enemy : MonoBehaviour {
     }
 
     void DisableOnDead () {
-        //gameManagerScript.SetScore(20);
         gameObject.SetActive(false);        
     }
 
     void OnTriggerEnter2D (Collider2D other) {
         if (m_health > 0) {
-            // If player is nearby disable attack related coroutine before
             if (other.gameObject.tag == "Player Main Collider") {
-                // Trigger Attack Transition
                 StopCoroutine("IdleDelayCR");
                 m_animator.SetBool(EnemyAnimation.TransitionCoditions.AtkIdle, true);
             }
-
-            // Turn and wait for a few seconds before moving
             if (other.gameObject.tag == "Ground&Obstacles") {
                 isCollidingWithObstacle = true;
                 m_animator.SetBool (EnemyAnimation.TransitionCoditions.Idle, true);
             }
-
-            // If player attacks with sword
             if (other.gameObject.tag == "PlayerSword") {
                 StopCoroutine("IdleDelayCR");
                 if (m_animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Idle")) {
@@ -204,10 +190,9 @@ public class Enemy : MonoBehaviour {
         }
 
     }
-
     void OnTriggerExit2D (Collider2D other) {
        if (other.gameObject.tag == "Ground&Obstacles") {
             isCollidingWithObstacle = false;
-        }
+       }
     }
 }
