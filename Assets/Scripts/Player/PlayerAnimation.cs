@@ -54,14 +54,10 @@ public class PlayerAnimation : MonoBehaviour {
 	}
 
 	void SetJump () {
-
-		// as soon as jump is pressed activate jump state
 		if (m_input.isOnGround && m_input.m_jumpPressed) {
-			m_animator.SetBool (TransitionCoditions.isJumpPressed, true);
-		// When in air and falling state
+            m_animator.SetBool (TransitionCoditions.isJumpPressed, true);
 		} else if (!m_input.isOnGround && m_input.isFalling) {
 			m_animator.SetBool (TransitionCoditions.isFalling, true);
-		// when neither state, on ground
 		} else {
 			m_animator.SetBool (TransitionCoditions.isJumpPressed, false);
 			m_animator.SetBool (TransitionCoditions.isFalling, false);
@@ -82,21 +78,25 @@ public class PlayerAnimation : MonoBehaviour {
 
 		bool AtkSec = m_animator.GetCurrentAnimatorStateInfo(0).IsName ("Attack State.Attack3");
 
-		if (m_input.isOnGround) {
-			if (m_input.m_attack1 && !isAttackPrimaryPlaying()) {
-				currentAttackT = currentAttackT == 0? 1: 0;
-				// FIX: VJoy Attack disable to make it tappable attack on touch screen
-				JoyInputController.m_attackPrimary = false;
-				InitiateAttack (m_input.m_attack1);
-			} else {
-				InitiateAttack (false);
-			}
-
-			if (m_input.m_attack2) {
-				currentAttackT = 2;
-				InitiateAttack (m_input.m_attack2);
-			}
-		}
+        if (m_input.isOnGround)
+        {
+            if (m_input.m_attack1 && !isAttackPrimaryPlaying() && !isAttackSecondaryPlaying())
+            {
+                currentAttackT = currentAttackT == 0 ? 1 : 0;
+                SoundManager.PlaySound("attack");
+                InitiateAttack(m_input.m_attack1);
+            }
+            else if (m_input.m_attack2 && !isAttackSecondaryPlaying() && !isAttackPrimaryPlaying())
+            {
+                currentAttackT = 2;
+                SoundManager.PlaySound("attack");
+                InitiateAttack(m_input.m_attack2);
+            }
+            else
+            {
+                InitiateAttack(false);
+            }
+        }
 	}
 
 	void InitiateAttack (bool isAtk) {
@@ -112,6 +112,13 @@ public class PlayerAnimation : MonoBehaviour {
 
 		return AtkPrim1 || AtkPrim2;
 	}
+
+    public bool isAttackSecondaryPlaying()
+    {
+        bool AtkSec1 = m_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack State.Attack3");
+
+        return AtkSec1;
+    }
 
     private void SetGrabCorner ()
     {

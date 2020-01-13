@@ -13,12 +13,11 @@ public class BanditAtkIdleBehaviour : BanditBaseFSM {
 		if (!NPCScriptRef.isCollidingWithObstacle) {
 			NPCScriptRef.CheckIfEnemyHasToTurn (PlayerObject.transform.position);
 		}
-
 		if (Vector2.Distance(animator.transform.position,PlayerObject.transform.position) < 2) {
 			animator.SetBool (EnemyAnimation.TransitionCoditions.Attack, true);
 		} else if (Vector2.Distance(animator.transform.position,PlayerObject.transform.position) > 5) {
 			animator.SetBool (EnemyAnimation.TransitionCoditions.Walk, true);
-		}
+		} 
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

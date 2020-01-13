@@ -115,7 +115,8 @@ public class PlayerMovement : MonoBehaviour {
 	void Jump () {
 		m_input.m_jumpPressed = false;
 		if (m_input.isOnGround) {
-			transform.parent = null;
+            SoundManager.PlaySound("jump");
+            transform.parent = null;
 			m_playerRb.velocity = Vector2.zero;
 			m_playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 		}
@@ -176,8 +177,9 @@ public class PlayerMovement : MonoBehaviour {
 		currentHealth -= 15f;
 		float healthRatio = currentHealth / MAX_HEALTH;
         m_input.isHurt = true;
+        SoundManager.PlaySound("hurt");
 
-		gameManagerScript.SetPlayerHealth(healthRatio);
+        gameManagerScript.SetPlayerHealth(healthRatio);
 
 		if (currentHealth <= 0) {
 			currentHealth = MAX_HEALTH;
@@ -185,7 +187,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D (Collider2D other) {
-		if (other.gameObject.tag == "EnemyWeaponTrigger") {
+		if (other.gameObject.tag == "EnemyWeaponTrigger" || other.gameObject.tag == "FireBall") {
 			DamagePlayer ();
 		}
 	}

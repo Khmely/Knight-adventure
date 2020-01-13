@@ -16,6 +16,7 @@ TagManager:
   - Player Main Collider
   - Portal
   - NPC
+  - FireBall
   layers:
   - Default
   - TransparentFX

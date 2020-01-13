@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public enum EnemyType {
-    BANDITS,
-    DEMON
+    BANDITS
 };
 
 public class Enemy : MonoBehaviour {
@@ -142,9 +141,12 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    // Play hurt animation and decrease health value
     void TakeDamage () {
-        m_health -= DamageByPlayer+ PlayerMovement.ATTACK;
+        m_health -= DamageByPlayer + PlayerMovement.ATTACK;
+        if (m_health <= 0) {
+            m_animator.SetBool(EnemyAnimation.TransitionCoditions.Die, true);
+            SoundManager.PlaySound("kill");
+        }
         SetIdle ();
         m_animator.SetBool (EnemyAnimation.TransitionCoditions.Hurt, true);
     }
