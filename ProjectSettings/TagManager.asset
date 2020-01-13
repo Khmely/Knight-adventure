@@ -17,6 +17,7 @@ TagManager:
   - Portal
   - NPC
   - FireBall
+  - Trap
   layers:
   - Default
   - TransparentFX

@@ -13,39 +13,38 @@ public class PlayerAnimation : MonoBehaviour {
 		public static string isFalling      = "isFalling";
 		public static string isGrounded  	= "isGrounded";
 		public static string isCrouching 	= "isCrouching";
-		public static string isSliding 	 	= "isSliding";
 		public static string isInFlight  	= "isInFlight";
 		public static string Attack         = "Attack";
 		public static string AttackType     = "AttackType";
         public static string grabCorner     = "grabCorner";
         public static string isHurt         = "isHurt";
+        public static string isDead         = "isDead";
 	};
 
 	bool prevJumpState;
 	int currentAttackT;
-
-	// Use this for initialization
 	void Awake () {
 		m_animator = GetComponent <Animator> ();
 		m_input = GetComponent <InputController>();
 
 		currentAttackT = 0;
 	}
-
-	// Update is called once per frame
 	void Update () {
 		m_animator.SetBool (TransitionCoditions.isGrounded, m_input.isOnGround);
-
 		SetWalk ();
 		SetJump ();
 		SetCrouch ();
-		// SetSlide ();
 		SetAttack ();
         SetGrabCorner();
         SetClimb();
         SetHurt();
+        SetDead();
     }
 
+    void SetDead() {
+        m_animator.SetBool(TransitionCoditions.isDead, m_input.isDead);
+        //m_input.isDead = false;
+    }
 
 	void SetWalk () {
 		if (m_input.isOnGround && !m_input.m_crouchPressed) {

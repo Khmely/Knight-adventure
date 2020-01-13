@@ -10,9 +10,10 @@ public class GameManager : MonoBehaviour {
 	public Text HealthCount;
     public Text monolog;
 	public Image HealthUI;
-    //public GameObject OptionsMenu;
 
-	private int MAX_HEALTHCOUNT = 3;
+    PlayerMovement pm;
+
+    private int MAX_HEALTHCOUNT = 3;
 	private int livesRemain;
     private int enemies;
 
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour {
     }
     private void Awake()
     {
+        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         livesRemain = MAX_HEALTHCOUNT;
         SetHealthUI();
     }
@@ -58,33 +60,19 @@ public class GameManager : MonoBehaviour {
     {
         monolog.enabled = false;
     }
-
-    void PlayerDied () {
+    public void PlayerDied () {
 		livesRemain -= 1;
 		SetHealthUI();
         if (livesRemain <= 0) {
             SetScore(-200);
-            SceneManager.LoadScene("Level1");
+            pm.PlayerDead();
+            Invoke("LoadMainMenu", 1f);
         }
 	}
 
 	void SetHealthUI () {
 		HealthCount.text = "X" + livesRemain.ToString ();
 	}
-
-    /*
-    public void ToggleOptionsMenu ()
-    {
-        OptionsMenu.SetActive(!OptionsMenu.activeSelf);
-        if (OptionsMenu.activeSelf)
-        {
-            Time.timeScale = 0;
-        } else
-        {
-            SetTimeScale();
-        }
-    }
-    */
 
     public void LoadMainMenu ()
     {

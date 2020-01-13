@@ -48,7 +48,6 @@ public class PlayerMovement : MonoBehaviour {
     void FixedUpdate () {
 		MovePlayer ();
 		PlayerRaycast ();
-
         if (!CheckIfGrabCorner())
         {
             ModifyGravity();
@@ -150,6 +149,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+
 	void PlayerRaycast() {
 		RaycastHit2D downRayLeft = Physics2D.Raycast (this.transform.position + new Vector3(-0.2f, 0), Vector2.down, downRaySize);
 		RaycastHit2D downRayRight = Physics2D.Raycast (this.transform.position + new Vector3(0.2f, 0), Vector2.down, downRaySize);
@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject.tag == "EnemyWeaponTrigger" || other.gameObject.tag == "FireBall") {
-			DamagePlayer ();
+			DamagePlayer();
 		}
 	}
 
@@ -217,6 +217,11 @@ public class PlayerMovement : MonoBehaviour {
         {
             this.transform.parent = collision.transform;
         }
+        if (collision.gameObject.tag.Equals("Trap"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameManagerScript.SetScore(-200);
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -225,6 +230,10 @@ public class PlayerMovement : MonoBehaviour {
         {
             this.transform.parent = null;
         }
+    }
+
+    public void PlayerDead() {
+        m_input.isDead = true;
     }
 }
 
