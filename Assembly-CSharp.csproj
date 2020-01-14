@@ -64,8 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameOver.cs" />
-    <Compile Include="Assets\PauseMenu.cs" />
+    <Compile Include="Assets\FireSkull.cs" />
     <Compile Include="Assets\Scripts\CameraAndBackground\BackgroundScroller.cs" />
     <Compile Include="Assets\Scripts\CameraAndBackground\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CameraAndBackground\Scroll.cs" />
@@ -90,14 +89,18 @@
     <Compile Include="Assets\Scripts\GameManagers\LevelUpManager.cs" />
     <Compile Include="Assets\Scripts\GameManagers\MainMenu.cs" />
     <Compile Include="Assets\Scripts\GameManagers\nextLevel.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\Ghost_v2.cs" />
     <Compile Include="Assets\Scripts\Hatman.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLedgeGrab.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Volume.cs" />
+    <Compile Include="Assets\Scripts\VolumeChange.cs" />
     <Compile Include="Assets\Scripts\WomanQuest.cs" />
-    <Compile Include="Assets\SoundManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark02.cs" />
@@ -131,8 +134,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\Volume.cs" />
-    <Compile Include="Assets\VolumeChange.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -155,19 +156,19 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Diploma/Knight-adventure/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Diploma/Knight-adventure/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Diploma/Knight-adventure/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Diploma/Knight-adventure/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Diploma/Knight-adventure/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -371,16 +372,16 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>C:/Diploma/Knight-adventure/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Diploma/Knight-adventure/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Diploma/Knight-adventure/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Diploma/Knight-adventure/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>E:/Github/Knight-adventure/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

@@ -191,11 +191,11 @@ public class PlayerMovement : MonoBehaviour {
         {
             DamagePlayer();
         }
-        else if (other.gameObject.tag == "Trap") {
+        else if (other.gameObject.tag == "Trap")
+        {
             PlayerDead();
             gameManagerScript.Invoke("GameOverMenu", 0.8f);
-        }
-        
+        }       
 	}
 
     public void SetOnGrabStay ()
@@ -230,6 +230,10 @@ public class PlayerMovement : MonoBehaviour {
         if (collision.gameObject.name.Equals("Platform"))
         {
             this.transform.parent = null;
+        }
+        else if (collision.gameObject.tag.Equals("Skull"))
+        {
+            DamagePlayer();
         }
     }
 
