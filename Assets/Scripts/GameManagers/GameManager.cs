@@ -19,14 +19,20 @@ public class GameManager : MonoBehaviour {
 
     public static int score;
 
+    public static bool GameIsPaused = false;
+
+    public GameObject GameOverUI;
+
     private void Start()
     {
+        //SetZero();
         PlayerPrefs.SetString("SceneName", SceneManager.GetActiveScene().name);
         if (SceneManager.GetActiveScene().name == "Level1") {
             ShowMonolog();
             Invoke("DisableText", 2f);
         }
     }
+
     private void Awake()
     {
         pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
@@ -42,6 +48,9 @@ public class GameManager : MonoBehaviour {
     public void Update()
     {
         scoreHolder.text = "Karma: " + score.ToString();
+    }
+    public void SetZero(){
+        score = 0;
     }
 
     public void SetScore (int value) {
@@ -62,12 +71,12 @@ public class GameManager : MonoBehaviour {
     }
     public void PlayerDied () {
 		livesRemain -= 1;
-		SetHealthUI();
-        if (livesRemain <= 0) {
-            SetScore(-200);
+        if (livesRemain <= 0)
+        {
             pm.PlayerDead();
-            Invoke("LoadMainMenu", 1f);
+            Invoke("GameOverMenu", 0.8f);
         }
+        SetHealthUI();
 	}
 
 	void SetHealthUI () {
@@ -83,6 +92,14 @@ public class GameManager : MonoBehaviour {
     void SetTimeScale ()
     {
         Time.timeScale = 1;
+    }
+
+    public void GameOverMenu()
+    {
+        Time.timeScale = 0f;
+        SetScore(-200);
+        GameOverUI.SetActive(true);
+        GameIsPaused = true;
     }
 
 }

@@ -43,7 +43,6 @@ public class PlayerAnimation : MonoBehaviour {
 
     void SetDead() {
         m_animator.SetBool(TransitionCoditions.isDead, m_input.isDead);
-        //m_input.isDead = false;
     }
 
 	void SetWalk () {

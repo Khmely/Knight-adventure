@@ -145,7 +145,7 @@ public class PlayerMovement : MonoBehaviour {
 	void ResetIfDead () {
 		if (this.transform.position.y < -7) {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            gameManagerScript.SetScore(-200);
+            gameManagerScript.SetScore(-150);
 		}
 	}
 
@@ -187,9 +187,15 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D (Collider2D other) {
-		if (other.gameObject.tag == "EnemyWeaponTrigger" || other.gameObject.tag == "FireBall") {
-			DamagePlayer();
-		}
+        if (other.gameObject.tag == "EnemyWeaponTrigger" || other.gameObject.tag == "FireBall")
+        {
+            DamagePlayer();
+        }
+        else if (other.gameObject.tag == "Trap") {
+            PlayerDead();
+            gameManagerScript.Invoke("GameOverMenu", 0.8f);
+        }
+        
 	}
 
     public void SetOnGrabStay ()
@@ -216,11 +222,6 @@ public class PlayerMovement : MonoBehaviour {
         if (collision.gameObject.name.Equals("Platform"))
         {
             this.transform.parent = collision.transform;
-        }
-        if (collision.gameObject.tag.Equals("Trap"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            gameManagerScript.SetScore(-200);
         }
     }
 
