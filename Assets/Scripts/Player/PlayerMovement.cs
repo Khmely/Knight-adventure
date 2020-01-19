@@ -17,12 +17,13 @@ public class PlayerMovement : MonoBehaviour {
 	Animator m_animator;
 	GameManager gameManagerScript;
 	InputController m_input;
+    //Enemy enemy;
 
 	float m_moveX;
 	Vector2 prevPosition;
 	[SerializeField]
 	public static int MAX_HEALTH = 100;
-    public static int ATTACK = 0;
+    public static int ATTACK = 25;
     float currentHealth;
     BoxCollider2D boxCollider;
 
@@ -173,8 +174,8 @@ public class PlayerMovement : MonoBehaviour {
 		m_input.isOnGround = m_status;
 	}
 
-	void DamagePlayer () {
-		currentHealth -= 15f;
+	void DamagePlayer (int damage) {
+		currentHealth -= damage;
 		float healthRatio = currentHealth / MAX_HEALTH;
         m_input.isHurt = true;
         SoundManager.PlaySound("hurt");
@@ -189,7 +190,7 @@ public class PlayerMovement : MonoBehaviour {
 	private void OnTriggerEnter2D (Collider2D other) {
         if (other.gameObject.tag == "EnemyWeaponTrigger" || other.gameObject.tag == "FireBall")
         {
-            DamagePlayer();
+            DamagePlayer(Enemy.damage);
         }
         else if (other.gameObject.tag == "Trap")
         {
@@ -233,7 +234,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (collision.gameObject.tag.Equals("Skull"))
         {
-            DamagePlayer();
+            DamagePlayer(FireSkull.damage);
         }
     }
 

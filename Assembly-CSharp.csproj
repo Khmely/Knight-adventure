@@ -64,12 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FireSkull.cs" />
     <Compile Include="Assets\Scripts\CameraAndBackground\BackgroundScroller.cs" />
     <Compile Include="Assets\Scripts\CameraAndBackground\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\CameraAndBackground\Scroll.cs" />
     <Compile Include="Assets\Scripts\CameraAndBackground\Scroll_v2.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Bandit.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Bandit\Bandit.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bandit\BanditAtkIdleBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bandit\BanditAttackBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bandit\BanditBaseFSM.cs" />
@@ -79,28 +77,28 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyAnimation.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyState.cs" />
-    <Compile Include="Assets\Scripts\EnemyGPX.cs" />
-    <Compile Include="Assets\Scripts\FallingPlatform.cs" />
-    <Compile Include="Assets\Scripts\FireBall.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FireSkull\EnemyGPX.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FireSkull\FireBall.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FireSkull\FireSkull.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FireSkull\Ghost_v2.cs" />
+    <Compile Include="Assets\Scripts\GameManagers\Controlers\InputController.cs" />
+    <Compile Include="Assets\Scripts\GameManagers\Controlers\InputManager.cs" />
     <Compile Include="Assets\Scripts\GameManagers\GameManager.cs" />
-    <Compile Include="Assets\Scripts\GameManagers\InputController.cs" />
-    <Compile Include="Assets\Scripts\GameManagers\InputManager.cs" />
-    <Compile Include="Assets\Scripts\GameManagers\JoyInputController.cs" />
+    <Compile Include="Assets\Scripts\GameManagers\GameOver.cs" />
     <Compile Include="Assets\Scripts\GameManagers\LevelUpManager.cs" />
     <Compile Include="Assets\Scripts\GameManagers\MainMenu.cs" />
     <Compile Include="Assets\Scripts\GameManagers\nextLevel.cs" />
-    <Compile Include="Assets\Scripts\GameOver.cs" />
-    <Compile Include="Assets\Scripts\Ghost_v2.cs" />
-    <Compile Include="Assets\Scripts\Hatman.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\Platform.cs" />
+    <Compile Include="Assets\Scripts\GameManagers\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\GameManagers\Sound\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\GameManagers\Sound\Volume.cs" />
+    <Compile Include="Assets\Scripts\GameManagers\Sound\VolumeChange.cs" />
+    <Compile Include="Assets\Scripts\MapActions\FallingPlatform.cs" />
+    <Compile Include="Assets\Scripts\MapActions\Hatman.cs" />
+    <Compile Include="Assets\Scripts\MapActions\Platform.cs" />
+    <Compile Include="Assets\Scripts\MapActions\WomanQuest.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLedgeGrab.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\Volume.cs" />
-    <Compile Include="Assets\Scripts\VolumeChange.cs" />
-    <Compile Include="Assets\Scripts\WomanQuest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark02.cs" />

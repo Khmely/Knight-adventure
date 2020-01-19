@@ -8,7 +8,7 @@ public class BanditIdleBehaviour : BanditBaseFSM {
 		base.OnStateEnter (animator, stateInfo, layerIndex);
 		NPCScriptRef.FlipEnemy ();
 		NPCScriptRef.SetIdle ();
-		if (NPCScriptRef.m_health > 0) {
+		if (NPCScriptRef.health > 0) {
 			NPCScriptRef.IdleDelay();
 		}
 	}

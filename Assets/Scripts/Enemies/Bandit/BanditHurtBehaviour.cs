@@ -5,7 +5,7 @@ using UnityEngine;
 public class BanditHurtBehaviour : BanditBaseFSM {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		base.OnStateEnter (animator, stateInfo, layerIndex);
-		if (NPCScriptRef.m_health == 0 || NPCScriptRef.m_health < 0) {
+		if (NPCScriptRef.health == 0 || NPCScriptRef.health < 0) {
             NPCScriptRef.SetIdle ();
 			NPC.GetComponent <CapsuleCollider2D> ().enabled = false;
 			Transform[] childLayers = new Transform[NPC.transform.childCount];
@@ -18,6 +18,5 @@ public class BanditHurtBehaviour : BanditBaseFSM {
     }
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		animator.SetBool(EnemyAnimation.TransitionCoditions.Hurt, false);
-        //GameManager.score += 20;
     }
 }

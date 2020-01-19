@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1484,7 +1484,17 @@ PrefabInstance:
     - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
         type: 3}
       propertyPath: m_speed
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: speed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
@@ -2424,6 +2434,16 @@ PrefabInstance:
         type: 3}
       propertyPath: DamageByPlayer
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: speed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
@@ -3411,6 +3431,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: m_type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
 --- !u!4 &589338855 stripped
@@ -3830,6 +3865,16 @@ PrefabInstance:
       propertyPath: m_type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
 --- !u!4 &620931919 stripped
@@ -4195,6 +4240,21 @@ PrefabInstance:
       propertyPath: m_damage
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: m_type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
 --- !u!4 &674987697 stripped
@@ -4341,6 +4401,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: speed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
@@ -4657,6 +4727,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: speed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
@@ -8537,6 +8617,16 @@ PrefabInstance:
       propertyPath: m_type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+        type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
 --- !u!4 &1393301837 stripped
@@ -10570,13 +10660,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdeab71e0cefb0244b53eff30932e482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 4
-  m_type: 0
-  m_damage: 30
-  DamageByPlayer: 10
-  MAX_HEALTH: 70
+  speed: 4
+  type: 0
+  MAX_HEALTH: 200
   isCollidingWithObstacle: 0
-  m_health: 0
+  health: 0
 --- !u!1 &1907106844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8161528732563847499, guid: c42861ad8be987e4295614062bfa1fe0,
@@ -11838,6 +11926,21 @@ PrefabInstance:
     - target: {fileID: 4117925580607562, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: MAX_HEALTH
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: m_type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
+        type: 3}
+      propertyPath: speed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
