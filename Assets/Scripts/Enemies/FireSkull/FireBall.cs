@@ -11,6 +11,7 @@ public class FireBall : MonoBehaviour
     private Animator animator;
     SpriteRenderer sr;
     PlayerMovement pm;
+    public static int damage = 15;
 
     void Start()
     {

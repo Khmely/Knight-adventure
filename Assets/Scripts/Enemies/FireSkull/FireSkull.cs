@@ -9,7 +9,8 @@ public class FireSkull : MonoBehaviour
 
     public float speed;
     public int health;
-    public static int damage = 30; 
+    public int baseDmg = 40;
+    public static int damage; 
     public float nextPointDistance;
     public Transform FireSkullGFX;
 
@@ -29,6 +30,7 @@ public class FireSkull : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, .5f);
         animator = GetComponentInChildren<Animator>();
+        damage = baseDmg - PlayerMovement.FIRERES;
     }
 
     void UpdatePath()

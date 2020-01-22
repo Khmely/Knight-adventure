@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour {
 
     public float speed;
     public EnemyType type;
-    public static int damage = 25;
+    public static int damage = 15;
     public int MAX_HEALTH;
 
     [HideInInspector]

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1390,7 +1390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320681618}
   - component: {fileID: 320681617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Ground&Obstacles
   m_Icon: {fileID: 0}
@@ -1531,11 +1531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244566485115676, guid: c42861ad8be987e4295614062bfa1fe0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4
+      value: 3.07
       objectReference: {fileID: 0}
     - target: {fileID: 4244566485115676, guid: c42861ad8be987e4295614062bfa1fe0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.95
+      value: 9.81
       objectReference: {fileID: 0}
     - target: {fileID: 4244566485115676, guid: c42861ad8be987e4295614062bfa1fe0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1588,15 +1588,15 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1405379201}
-    - target: {fileID: 61368089095586748, guid: c42861ad8be987e4295614062bfa1fe0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 212921602775766580, guid: c42861ad8be987e4295614062bfa1fe0,
         type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 61368089095586748, guid: c42861ad8be987e4295614062bfa1fe0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 50540833896587246, guid: c42861ad8be987e4295614062bfa1fe0,
         type: 3}
@@ -3795,7 +3795,7 @@ PrefabInstance:
     - target: {fileID: 2000294887367097502, guid: 20f5811b472791f46ad9a0da690b41e5,
         type: 3}
       propertyPath: startTimeBtwShots
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20f5811b472791f46ad9a0da690b41e5, type: 3}
@@ -4121,7 +4121,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.02216196}
+  m_Offset: {x: 0, y: 0.015454769}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4132,7 +4132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.8, y: 2.1556761}
+  m_Size: {x: 4.8, y: 2.2309096}
   m_EdgeRadius: 0
 --- !u!212 &697452412
 SpriteRenderer:
@@ -5888,7 +5888,7 @@ PrefabInstance:
     - target: {fileID: 2000294887367097502, guid: 20f5811b472791f46ad9a0da690b41e5,
         type: 3}
       propertyPath: startTimeBtwShots
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20f5811b472791f46ad9a0da690b41e5, type: 3}
@@ -6159,7 +6159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 910687546}
   - component: {fileID: 910687547}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LedgeGrab (3)
   m_TagString: Ledge Grab
   m_Icon: {fileID: 0}
@@ -6448,7 +6448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945971876}
   - component: {fileID: 945971877}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Project (4)
   m_TagString: Ground&Obstacles
   m_Icon: {fileID: 0}
@@ -7790,7 +7790,7 @@ PrefabInstance:
     - target: {fileID: 2000294887367097502, guid: 20f5811b472791f46ad9a0da690b41e5,
         type: 3}
       propertyPath: startTimeBtwShots
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20f5811b472791f46ad9a0da690b41e5, type: 3}

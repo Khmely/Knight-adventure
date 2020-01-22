@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
-	public int playerSpeed = 9;
+	public static int playerSpeed = 8;
 	public int jumpForce = 1250;
 	public float downRaySize = 0.8f;
 	public Transform swordTransform;
@@ -17,13 +17,13 @@ public class PlayerMovement : MonoBehaviour {
 	Animator m_animator;
 	GameManager gameManagerScript;
 	InputController m_input;
-    //Enemy enemy;
 
 	float m_moveX;
 	Vector2 prevPosition;
 	[SerializeField]
-	public static int MAX_HEALTH = 100;
+	public static float MAX_HEALTH = 100;
     public static int ATTACK = 25;
+    public static int FIRERES = 0;
     float currentHealth;
     BoxCollider2D boxCollider;
 
@@ -174,12 +174,12 @@ public class PlayerMovement : MonoBehaviour {
 		m_input.isOnGround = m_status;
 	}
 
-	void DamagePlayer (int damage) {
+	void DamagePlayer (float damage) {
 		currentHealth -= damage;
 		float healthRatio = currentHealth / MAX_HEALTH;
         m_input.isHurt = true;
         SoundManager.PlaySound("hurt");
-
+        Debug.Log(damage);
         gameManagerScript.SetPlayerHealth(healthRatio);
 
 		if (currentHealth <= 0) {
@@ -188,9 +188,12 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D (Collider2D other) {
-        if (other.gameObject.tag == "EnemyWeaponTrigger" || other.gameObject.tag == "FireBall")
+        if (other.gameObject.tag == "EnemyWeaponTrigger")
         {
             DamagePlayer(Enemy.damage);
+        } else if (other.gameObject.tag == "FireBall")
+        {
+            DamagePlayer(FireBall.damage);
         }
         else if (other.gameObject.tag == "Trap")
         {
@@ -223,6 +226,10 @@ public class PlayerMovement : MonoBehaviour {
         if (collision.gameObject.name.Equals("Platform"))
         {
             this.transform.parent = collision.transform;
+        }
+        else if (collision.gameObject.tag.Equals("Skull"))
+        {
+            DamagePlayer(FireSkull.damage);
         }
     }
 

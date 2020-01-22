@@ -9,7 +9,7 @@ public class LevelUpManager : MonoBehaviour
 {
     public void AttackUp()
     {
-        PlayerMovement.ATTACK += 20;
+        PlayerMovement.ATTACK += 25;
         if (PlayerPrefs.GetString("SceneName") == "Level1") {
             SceneManager.LoadScene("Level2");
         }
@@ -21,11 +21,15 @@ public class LevelUpManager : MonoBehaviour
         {
             SceneManager.LoadScene("Level4");
         }
+        else if (PlayerPrefs.GetString("SceneName") == "Level4")
+        {
+            SceneManager.LoadScene("Level5");
+        }
     }
 
     public void DeffendUp()
     {
-        PlayerMovement.MAX_HEALTH += 15;
+        PlayerMovement.MAX_HEALTH += 25f;
         if (PlayerPrefs.GetString("SceneName") == "Level1")
         {
             SceneManager.LoadScene("Level2");
@@ -37,6 +41,51 @@ public class LevelUpManager : MonoBehaviour
         else if (PlayerPrefs.GetString("SceneName") == "Level3")
         {
             SceneManager.LoadScene("Level4");
+        }
+        else if (PlayerPrefs.GetString("SceneName") == "Level4")
+        {
+            SceneManager.LoadScene("Level5");
+        }
+    }
+    public void Resistance()
+    {
+        PlayerMovement.FIRERES += 6;
+        if (PlayerPrefs.GetString("SceneName") == "Level1")
+        {
+            SceneManager.LoadScene("Level2");
+        }
+        else if (PlayerPrefs.GetString("SceneName") == "Level2")
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        else if (PlayerPrefs.GetString("SceneName") == "Level3")
+        {
+            SceneManager.LoadScene("Level4");
+        }
+        else if (PlayerPrefs.GetString("SceneName") == "Level4")
+        {
+            SceneManager.LoadScene("Level5");
+        }
+    }
+
+    public void SpeedUp()
+    {
+        PlayerMovement.playerSpeed += 1;
+        if (PlayerPrefs.GetString("SceneName") == "Level1")
+        {
+            SceneManager.LoadScene("Level2");
+        }
+        else if (PlayerPrefs.GetString("SceneName") == "Level2")
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        else if (PlayerPrefs.GetString("SceneName") == "Level3")
+        {
+            SceneManager.LoadScene("Level4");
+        }
+        else if (PlayerPrefs.GetString("SceneName") == "Level4")
+        {
+            SceneManager.LoadScene("Level5");
         }
     }
 }
