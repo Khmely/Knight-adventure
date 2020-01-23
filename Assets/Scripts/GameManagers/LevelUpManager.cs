@@ -9,7 +9,7 @@ public class LevelUpManager : MonoBehaviour
 {
     public void AttackUp()
     {
-        PlayerMovement.ATTACK += 25;
+        PlayerMovement.ATTACK += 15;
         if (PlayerPrefs.GetString("SceneName") == "Level1") {
             SceneManager.LoadScene("Level2");
         }

@@ -734,6 +734,29 @@ Transform:
   m_Father: {fileID: 2128949501}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &75545439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e,
+    type: 3}
+  m_PrefabInstance: {fileID: 710820944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &75545440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75545439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  type: 0
+  MAX_HEALTH: 100
+  isCollidingWithObstacle: 0
+  health: 0
 --- !u!1 &93374396
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +946,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120724566}
   m_CullTransparentMesh: 0
+--- !u!1 &167272665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e,
+    type: 3}
+  m_PrefabInstance: {fileID: 620931918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &167272666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167272665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  type: 0
+  MAX_HEALTH: 100
+  isCollidingWithObstacle: 0
+  health: 0
 --- !u!1 &167399407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1201,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &181577366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060333236504586, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+    type: 3}
+  m_PrefabInstance: {fileID: 589338854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &181577367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181577366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  type: 1
+  MAX_HEALTH: 200
+  isCollidingWithObstacle: 0
+  health: 0
 --- !u!1 &186427326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1499,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1060333236504586, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
       propertyPath: m_Name
-      value: Bandit Heavy
+      value: Knight
       objectReference: {fileID: 0}
     - target: {fileID: 4814795456789394, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1494,9 +1563,10 @@ PrefabInstance:
     - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
 --- !u!4 &243441174 stripped
 Transform:
@@ -2379,7 +2449,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_Name
-      value: Bandit Light
+      value: LightSwordsman
       objectReference: {fileID: 0}
     - target: {fileID: 4117925580607562, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2443,9 +2513,10 @@ PrefabInstance:
     - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
 --- !u!4 &396687867 stripped
 Transform:
@@ -3385,7 +3456,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1060333236504586, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
       propertyPath: m_Name
-      value: Bandit Heavy (3)
+      value: Knight
       objectReference: {fileID: 0}
     - target: {fileID: 4814795456789394, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3444,9 +3515,10 @@ PrefabInstance:
     - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
 --- !u!4 &589338855 stripped
 Transform:
@@ -3814,7 +3886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_Name
-      value: Bandit Light (2)
+      value: LightSwordsman
       objectReference: {fileID: 0}
     - target: {fileID: 4117925580607562, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3873,9 +3945,10 @@ PrefabInstance:
     - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
 --- !u!4 &620931919 stripped
 Transform:
@@ -4189,7 +4262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_Name
-      value: Bandit Light (3)
+      value: LightSwordsman
       objectReference: {fileID: 0}
     - target: {fileID: 4117925580607562, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4253,9 +4326,10 @@ PrefabInstance:
     - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
 --- !u!4 &674987697 stripped
 Transform:
@@ -4351,7 +4425,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_Name
-      value: Bandit Light (1)
+      value: LightSwordsman
       objectReference: {fileID: 0}
     - target: {fileID: 4117925580607562, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4410,9 +4484,10 @@ PrefabInstance:
     - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
 --- !u!4 &710820945 stripped
 Transform:
@@ -4677,7 +4752,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1060333236504586, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
       propertyPath: m_Name
-      value: Bandit Heavy (2)
+      value: Knight
       objectReference: {fileID: 0}
     - target: {fileID: 4814795456789394, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4736,9 +4811,10 @@ PrefabInstance:
     - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
 --- !u!4 &788622215 stripped
 Transform:
@@ -5198,6 +5274,29 @@ Transform:
   m_Father: {fileID: 1720195333}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &873334709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060333236504586, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+    type: 3}
+  m_PrefabInstance: {fileID: 243441173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &873334710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873334709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  type: 1
+  MAX_HEALTH: 200
+  isCollidingWithObstacle: 0
+  health: 0
 --- !u!1 &892939411
 GameObject:
   m_ObjectHideFlags: 0
@@ -7029,6 +7128,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120350058}
   m_CullTransparentMesh: 0
+--- !u!1 &1137956006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060333236504586, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+    type: 3}
+  m_PrefabInstance: {fileID: 788622214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1137956007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137956006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  type: 1
+  MAX_HEALTH: 200
+  isCollidingWithObstacle: 0
+  health: 0
+--- !u!1 &1138377704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e,
+    type: 3}
+  m_PrefabInstance: {fileID: 674987696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1138377708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138377704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  type: 0
+  MAX_HEALTH: 100
+  isCollidingWithObstacle: 0
+  health: 0
 --- !u!1 &1173214492
 GameObject:
   m_ObjectHideFlags: 0
@@ -7108,6 +7253,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173214492}
   m_CullTransparentMesh: 0
+--- !u!1 &1204213735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060333236504586, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393301836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1204213736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204213735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  type: 1
+  MAX_HEALTH: 200
+  isCollidingWithObstacle: 0
+  health: 0
 --- !u!1 &1204725585
 GameObject:
   m_ObjectHideFlags: 0
@@ -8028,7 +8196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1319226736}
   m_Layer: 0
-  m_Name: Bandits
+  m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8566,7 +8734,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1060333236504586, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
       propertyPath: m_Name
-      value: Bandit Heavy (1)
+      value: Knight
       objectReference: {fileID: 0}
     - target: {fileID: 4814795456789394, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8625,9 +8793,10 @@ PrefabInstance:
     - target: {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114514177567742530, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef24b453c1275fe48bfdd7a03ab6bfe6, type: 3}
 --- !u!4 &1393301837 stripped
 Transform:
@@ -8714,6 +8883,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1482060946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e,
+    type: 3}
+  m_PrefabInstance: {fileID: 396687866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1482060947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482060946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  type: 0
+  MAX_HEALTH: 100
+  isCollidingWithObstacle: 0
+  health: 0
 --- !u!1 &1492625819
 GameObject:
   m_ObjectHideFlags: 0
@@ -9187,7 +9379,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1904995439, guid: b2ba97dd08759384d8d62db46363219c, type: 3}
       propertyPath: m_Name
-      value: Bandit Heavy Big
+      value: KnightBig
       objectReference: {fileID: 0}
     - target: {fileID: 1904995439, guid: b2ba97dd08759384d8d62db46363219c, type: 3}
       propertyPath: m_TagString
@@ -10648,7 +10840,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1622808194}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1904995443
+--- !u!114 &1904995440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10657,11 +10849,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1904995439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdeab71e0cefb0244b53eff30932e482, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  type: 0
+  speed: 3
+  type: 1
   MAX_HEALTH: 200
   isCollidingWithObstacle: 0
   health: 0
@@ -10861,6 +11053,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1997121331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2145377624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1997121332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997121331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bcbc9dafacf44a93aba19abebc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  type: 0
+  MAX_HEALTH: 100
+  isCollidingWithObstacle: 0
+  health: 0
 --- !u!1 &2013882471
 GameObject:
   m_ObjectHideFlags: 0
@@ -11881,7 +12096,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192489733589390, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_Name
-      value: Bandit Light (4)
+      value: LightSwordsman
       objectReference: {fileID: 0}
     - target: {fileID: 4117925580607562, guid: d6afbb7622023a04396c86072470141e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11940,9 +12155,10 @@ PrefabInstance:
     - target: {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114448461662496986, guid: d6afbb7622023a04396c86072470141e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6afbb7622023a04396c86072470141e, type: 3}
 --- !u!4 &2145377625 stripped
 Transform:
