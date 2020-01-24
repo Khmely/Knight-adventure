@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-
+using UnityEngine.UI;
 
 public class LevelUpManager : MonoBehaviour
 {
+    public Text characteristics;
+
+    public void ShowCharacteristics()
+    { 
+        characteristics.text = "Attack  " + PlayerMovement.ATTACK + "\n" + "Health  " + PlayerMovement.MAX_HEALTH + "\n" + "Fire resistance " + PlayerMovement.FIRERES + "%\n" + "Speed  " + PlayerMovement.playerSpeed + "\n";
+    }
+
+    private void Start()
+    {
+        ShowCharacteristics();
+    }
+
     public void AttackUp()
     {
         PlayerMovement.ATTACK += 15;
@@ -49,7 +60,7 @@ public class LevelUpManager : MonoBehaviour
     }
     public void Resistance()
     {
-        PlayerMovement.FIRERES += 6;
+        PlayerMovement.FIRERES += 15;
         if (PlayerPrefs.GetString("SceneName") == "Level1")
         {
             SceneManager.LoadScene("Level2");

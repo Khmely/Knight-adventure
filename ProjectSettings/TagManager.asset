@@ -9,7 +9,6 @@ TagManager:
   - PlayerSword
   - Enemy
   - EnemyWeaponTrigger
-  - Touch Controls
   - FxTemporaire
   - Ledge Grab
   - Moving Platform
@@ -19,6 +18,7 @@ TagManager:
   - FireBall
   - Trap
   - Skull
+  - Gem
   layers:
   - Default
   - TransparentFX

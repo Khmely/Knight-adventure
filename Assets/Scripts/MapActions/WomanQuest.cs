@@ -35,8 +35,9 @@ public class WomanQuest : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            womanTalk.text = "Please, find a power crystal and save our world! Take this gem, it will give you more power!";
+            womanTalk.text = "Greetings warrior, please listen to me. Dark times will come if you do not help. The demon has to break free from his crypt, stop him! Take this crystal, it will give you the strength you need.";
             GameManager.score += 200;
+            isInRange = false;
             Invoke("DisableText", 5f);
             Invoke("nextLevel", 3f);
         }

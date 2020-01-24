@@ -199,8 +199,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             PlayerDead();
             gameManagerScript.Invoke("GameOverMenu", 0.8f);
-        }       
-	}
+        }
+    }
 
     public void SetOnGrabStay ()
     {
