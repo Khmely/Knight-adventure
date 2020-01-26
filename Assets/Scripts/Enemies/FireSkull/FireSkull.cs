@@ -15,7 +15,6 @@ public class FireSkull : MonoBehaviour
     public Transform FireSkullGFX;
     GameObject projectile;
     Path path;
-    float a;
     int currentWaypoint = 0;
     bool reachedEnd = false;
 
@@ -25,10 +24,9 @@ public class FireSkull : MonoBehaviour
 
     void Start()
     {
-        //a = PlayerMovement.FIRERES / 100;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        InvokeRepeating("UpdatePath", 0f, .5f);
+        InvokeRepeating("UpdatePath", 0f, .2f);
         animator = GetComponentInChildren<Animator>();
         damage = (int)(baseDmg - (baseDmg * PlayerMovement.FIRERES / 100));
     }

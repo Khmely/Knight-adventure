@@ -245,6 +245,7 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
+
     public void PlayerDead() {
         m_input.isDead = true;
     }

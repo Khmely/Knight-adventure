@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15084,16 +15084,6 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3103577194423758283, guid: c42861ad8be987e4295614062bfa1fe0,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.010574341
-      objectReference: {fileID: 0}
-    - target: {fileID: 3103577194423758283, guid: c42861ad8be987e4295614062bfa1fe0,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.7516861
-      objectReference: {fileID: 0}
     - target: {fileID: 61612315804190970, guid: c42861ad8be987e4295614062bfa1fe0,
         type: 3}
       propertyPath: m_Offset.x
@@ -15103,6 +15093,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.44015884
+      objectReference: {fileID: 0}
+    - target: {fileID: 3103577194423758283, guid: c42861ad8be987e4295614062bfa1fe0,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.010574341
+      objectReference: {fileID: 0}
+    - target: {fileID: 3103577194423758283, guid: c42861ad8be987e4295614062bfa1fe0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7516861
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c42861ad8be987e4295614062bfa1fe0, type: 3}
@@ -15288,6 +15288,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireSkull (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 413946498186046915, guid: 84a4d17bce294c042aae63c8ed681c0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 413946498186046940, guid: 84a4d17bce294c042aae63c8ed681c0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15371,7 +15376,12 @@ PrefabInstance:
     - target: {fileID: 413946498186046913, guid: 84a4d17bce294c042aae63c8ed681c0e,
         type: 3}
       propertyPath: nextPointDistance
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413946498186046913, guid: 84a4d17bce294c042aae63c8ed681c0e,
+        type: 3}
+      propertyPath: baseDmg
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 413946498186046943, guid: 84a4d17bce294c042aae63c8ed681c0e,
         type: 3}
@@ -17411,6 +17421,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireSkull (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 413946498186046915, guid: 84a4d17bce294c042aae63c8ed681c0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 413946498186046940, guid: 84a4d17bce294c042aae63c8ed681c0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17494,7 +17509,12 @@ PrefabInstance:
     - target: {fileID: 413946498186046913, guid: 84a4d17bce294c042aae63c8ed681c0e,
         type: 3}
       propertyPath: nextPointDistance
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413946498186046913, guid: 84a4d17bce294c042aae63c8ed681c0e,
+        type: 3}
+      propertyPath: baseDmg
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 413946498186046943, guid: 84a4d17bce294c042aae63c8ed681c0e,
         type: 3}
@@ -19926,7 +19946,12 @@ PrefabInstance:
     - target: {fileID: 413946498186046913, guid: 84a4d17bce294c042aae63c8ed681c0e,
         type: 3}
       propertyPath: nextPointDistance
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413946498186046913, guid: 84a4d17bce294c042aae63c8ed681c0e,
+        type: 3}
+      propertyPath: baseDmg
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 413946498186046943, guid: 84a4d17bce294c042aae63c8ed681c0e,
         type: 3}
